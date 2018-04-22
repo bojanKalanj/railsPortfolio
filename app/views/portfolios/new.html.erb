@@ -1,5 +1,10 @@
 <h1>create a new portfolio</h1>
 
+<% if @portfolio_item.errors.any? %>
+    <%= @portfolio_item.errors.full_messages %>
+<% end %>
+
+
 <%= form_for(@portfolio_item) do |f| %>
   <div class="field">
     <%= f.label :title %>
@@ -9,6 +14,11 @@
   <div class="field">
     <%= f.label :subtitle %>
     <%= f.text_field :subtitle %>
+  </div>
+
+  <div class="field">
+    <%= f.label :body %>
+    <%= f.text_area :body %>
   </div>
 
   <div class="actions">

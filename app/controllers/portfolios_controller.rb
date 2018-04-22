@@ -3,6 +3,10 @@ class PortfoliosController < ApplicationController
     @portfolio_items = Portfolio.all
   end
 
+  def angular
+    @angular_portfolio_items = Portfolio.angular
+  end
+
   def new
     @portfolio_item = Portfolio.new
   end
@@ -10,15 +14,11 @@ class PortfoliosController < ApplicationController
   def create
     @portfolio_item = Portfolio.new(params.require(:portfolio).permit(:title, :subtitle, :body))
 
-    respond_to do |format|
       if @portfolio_item.save
-        format.html { redirect_to portfolios_path, notice: '@portfolio_item was successfully created.' }
-        format.json { render :show, status: :created, location: @portfolio_item }
+        redirect_to portfolios_path
       else
-        format.html { render :new }
-        format.json { render json: @portfolio_item.errors, status: :unprocessable_entity }
+        render 'new'
       end
-    end
   end
 
   def edit
