@@ -14,4 +14,8 @@ module ApplicationHelper
       content_tag(:p, "visiting me from #{session[:source]}" )
     end
   end
+
+  def copyright_generator
+    BKViewTool::Renderer.copyright 'Bojan Kalanj', 'All rights reserved'
+  end
 end

@@ -57,3 +57,5 @@ gem 'devise', '~> 4.1', '>= 4.1.1'
 gem 'bootstrap', '~> 4.1.0'
 
 gem 'jquery-rails'
+
+gem 'bk_view_tool', git: 'https://github.com/bojanKalanj/bk_view_tool'
