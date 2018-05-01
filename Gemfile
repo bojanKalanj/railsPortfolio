@@ -59,3 +59,5 @@ gem 'bootstrap', '~> 4.1.0'
 gem 'jquery-rails'
 
 gem 'bk_view_tool', git: 'https://github.com/bojanKalanj/bk_view_tool'
+
+gem 'petergate', '~> 1.8', '>= 1.8.1'
