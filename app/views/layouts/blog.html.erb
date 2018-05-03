@@ -36,6 +36,14 @@
       </header>
     </div> -->
 
+    <div class="blog-header">
+      <div class="container">
+        <h1 class="blog-title">Blog Title</h1>
+        <p class="lead blog-description">ajsdkjlkdkjass</p>
+        <%= link_to 'New Blog', new_blog_path if logged_in?(:site_admin)%>
+      </div>
+    </div>
+
     <div class="container">
       <div class="row">
         <%= yield %>
@@ -75,7 +83,7 @@
           </div>
         </aside><!-- /.blog-sidebar -->
         <!-- end sidebar -->
-
+      </div>
         <footer class="blog-footer">
           <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
           <p>
@@ -83,10 +91,7 @@
           </p>
         </footer>
 
-        <%= render 'shared/nav', location: 'bottom' %>
-
         <%= source_hleper %>
-      </div>
     </div>
   </body>
 </html>
